@@ -2,30 +2,33 @@ import React from "react";
 import classes from './Dialogs.module.css'
 import { NavLink } from "react-router-dom";
 
+const DialogItem = (props) => {
+    return <div>
+        <div className={classes.dialog}>
+            <NavLink to={'/dialogs/}' + props.id} className={navData => navData.isActive ? classes.active : classes.dialog}>{props.name}</NavLink>
+        </div>
+    </div>
+}
+
+const Message = (props) => {
+    return <div>
+        <div className={classes.message}>{props.message}</div>
+    </div>
+}
 
 const Dialogs = () => {
     return <div className={classes.dialogs}>
         <div className={classes.dialogsItems}>
-            <div className={classes.dialog}>
-                <NavLink to='/dialogs/1' className={navData => navData.isActive ? classes.active : classes.dialog}>Tony Stark</NavLink>
-            </div>
-            <div className={classes.dialog}>
-                <NavLink to='/dialogs/2' className={navData => navData.isActive ? classes.active : classes.dialog}>Steve Rogers</NavLink>
-            </div>
-            <div className={classes.dialog}>
-                <NavLink to='/dialogs/3' className={navData => navData.isActive ? classes.active : classes.dialog}>Peter Parker</NavLink>
-            </div>
-            <div className={classes.dialog}>
-                <NavLink to='/dialogs/4' className={navData => navData.isActive ? classes.active : classes.dialog}>Bruce Banner</NavLink>
-            </div>
-            <div className={classes.dialog}>
-                <NavLink to='/dialogs/5' className={navData => navData.isActive ? classes.active : classes.dialog}>Natasha Romanoff</NavLink>
-            </div>
+            <DialogItem name='Tony Stark' id='1' />
+            <DialogItem name='Steve Rogers' id='2' />
+            <DialogItem name='Peter Parker' id='3' />
+            <DialogItem name='Bruce Banner' id='4' />
+            <DialogItem name='Natasha Romanoff' id='5' />
         </div>
         <div className={classes.messages} >
-            <div className={classes.message}>Hi!</div>
-            <div className={classes.message}>How you doin?</div>
-            <div className={classes.message}>Hi...</div>
+            <Message message='Hi!' />
+            <Message message='How you doin?' />
+            <Message message='Hi...' />
         </div>
     </div>
 

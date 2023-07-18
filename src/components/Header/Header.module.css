@@ -1,8 +1,14 @@
 .header {
     grid-area: h;
-    background-color: rgb(20, 21, 23);
+    background-color: #080808;
   }
   
   .header img {
     height: 90%;
+  }
+
+  .header h1 {
+    font-size: 50;
+    color: crimson;
+    padding: 10px;
   }

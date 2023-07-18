@@ -1,4 +1,8 @@
-  .item {
-    color:rgb(251, 243, 83);
-  }
+.postsBlock {
+  padding: 10px;
+  color: crimson;
+}
 
+.posts {
+  margin-top: 10px;
+}

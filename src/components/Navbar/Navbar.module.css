@@ -1,15 +1,15 @@
 .nav {
     grid-area: n;
-    background-color: rgb(28, 30, 33);
+    background-color: #101010;
     padding: 20px
   
   }
 
 a {
-  color:rgb(203, 212, 219);
+  color: aliceblue;
     text-decoration: none;
   }
 
 .active {
-  color: rgb(255, 132, 132);
+  color: crimson;
   }

@@ -1,5 +1,5 @@
 body {
-  background-color: rgb(58, 64, 71);
+  background-color: #080808;
 }
 
 .app-wrapper {
@@ -11,12 +11,12 @@ body {
     "h h"
     "n c";
 
-  grid-template-rows: 60px 1fr;
+  grid-template-rows: 100px 1fr;
   grid-template-columns: 2fr 10fr;
 }
 
 .app-wrapper-content {
   grid-area: c;
-  background-color: rgb(35, 38, 43);
+  background-color: #181818;
 
 }
