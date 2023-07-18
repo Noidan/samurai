@@ -1,27 +1,28 @@
 import React from "react";
 import classes from './Dialogs.module.css'
+import { NavLink } from "react-router-dom";
 
 
-const Dialogs = (props) => {
+const Dialogs = () => {
     return <div className={classes.dialogs}>
         <div className={classes.dialogsItems}>
-            <div className={classes.dialog + ' ' + classes.active}>
-                Tony Stark
+            <div className={classes.dialog}>
+                <NavLink to='/dialogs/1' className={navData => navData.isActive ? classes.active : classes.dialog}>Tony Stark</NavLink>
             </div>
             <div className={classes.dialog}>
-                Steve Rogers
+                <NavLink to='/dialogs/2' className={navData => navData.isActive ? classes.active : classes.dialog}>Steve Rogers</NavLink>
             </div>
             <div className={classes.dialog}>
-                Peter Benjamin Parker
+                <NavLink to='/dialogs/3' className={navData => navData.isActive ? classes.active : classes.dialog}>Peter Parker</NavLink>
             </div>
             <div className={classes.dialog}>
-                Dr. Robert Bruce Banner
+                <NavLink to='/dialogs/4' className={navData => navData.isActive ? classes.active : classes.dialog}>Bruce Banner</NavLink>
             </div>
             <div className={classes.dialog}>
-                Natasha Romanoff
+                <NavLink to='/dialogs/5' className={navData => navData.isActive ? classes.active : classes.dialog}>Natasha Romanoff</NavLink>
             </div>
         </div>
-        <div className={classes.messages} > 
+        <div className={classes.messages} >
             <div className={classes.message}>Hi!</div>
             <div className={classes.message}>How you doin?</div>
             <div className={classes.message}>Hi...</div>
