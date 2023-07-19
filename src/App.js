@@ -16,11 +16,19 @@ const App = (props) => {
       <Navbar />
       <div className='app-wrapper-content'>
         <Routes>
-          <Route path='/profile' element={<Profile postsData={props.postsData} />} />
-          <Route path='/dialogs/*' element={<Dialogs dialogsData={props.dialogsData} messagesData={props.messagesData} />} />
-          <Route path='/news' element={<News />} />
-          <Route path='/music' element={<Music />} />
-          <Route path='/settings' element={<Settings />} />
+          <Route path='/profile'
+            element={<Profile
+              postsData={props.state.profilePage.postsData} />} />
+          <Route path='/dialogs/*'
+            element={<Dialogs
+              dialogsData={props.state.messagesPage.dialogsData}
+              messagesData={props.state.messagesPage.messagesData} />} />
+          <Route path='/news'
+            element={<News />} />
+          <Route path='/music'
+            element={<Music />} />
+          <Route path='/settings'
+            element={<Settings />} />
         </Routes>
       </div>
     </div>
@@ -28,6 +36,3 @@ const App = (props) => {
 }
 
 export default App;
-
-
-//<Route path="/dialogs" element={<Dialogs dialogs={dialogs} messages={messages}/>} />
