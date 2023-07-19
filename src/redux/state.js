@@ -22,6 +22,13 @@ let state = {
             { id: 2, message: 'How you doin?' },
             { id: 3, message: 'Hi...' }
         ]
+    },
+    sidebar: {
+        dicesData: [
+            { diceName: 'd6' },
+            { diceName: 'd10' },
+            { diceName: 'd100' }
+        ]
     }
 }
 
