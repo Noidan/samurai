@@ -13,7 +13,8 @@ const App = (props) => {
 
     <div className="app-wrapper">
       <Header />
-      <Navbar dicesData={props.state.sidebar.dicesData}/>
+      <Navbar />
+      {/* <Navbar dicesData={props.state.sidebar.dicesData}/> */}
       <div className='app-wrapper-content'>
         <Routes>
           <Route path='/profile'

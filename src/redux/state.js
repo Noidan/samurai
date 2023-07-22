@@ -1,3 +1,5 @@
+import { rerenderEntireTree } from './../render';
+
 let state = {
     profilePage: {
         postsData: [
@@ -23,13 +25,13 @@ let state = {
             { id: 3, message: 'Hi...' }
         ]
     },
-    sidebar: {
-        dicesData: [
-            { diceName: 'd6' },
-            { diceName: 'd10' },
-            { diceName: 'd100' }
-        ]
-    }
+    // sidebar: {
+    //     dicesData: [
+    //         { diceName: 'd6' },
+    //         { diceName: 'd10' },
+    //         { diceName: 'd100' }
+    //     ]
+    // }
 }
 
 export let addPost = (postMessage) => {
@@ -39,6 +41,7 @@ export let addPost = (postMessage) => {
         likes: 0
     }
     state.profilePage.postsData.push(newPost)
+    rerenderEntireTree(state);
 }
 
 

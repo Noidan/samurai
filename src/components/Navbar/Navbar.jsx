@@ -1,7 +1,7 @@
 import React from "react";
 import classes from './Navbar.module.css'
 import { NavLink } from "react-router-dom";
-import Dices from "./Dices/Dices";
+// import Dices from "./Dices/Dices";
 
 
 const Navbar = (props) => {
@@ -25,9 +25,9 @@ const Navbar = (props) => {
       </div>
     </nav>
 
-    <div className={classes.dices}>
+    {/* <div className={classes.dices}>
       <Dices dicesData={props.dicesData} />
-    </div>
+    </div> */}
   </div>
 }
 
